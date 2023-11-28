@@ -1,43 +1,76 @@
 var kana = ['a', 'i', 'u', 'e', 'o'];
-var isPrimaImmagine = true;
-
-
 
 function kanaCasuale() 
 {
-    return Math.floor(Math.random() * kana.length);;
+    return Math.floor(Math.random() * kana.length);; //creo un random che sceglie un indice dell'array kana 
 }
 
 function primoKana() 
 {
-    var immagine = document.getElementById("HiraganaPicture");
-    var risultato = `../Images/Hiragana/${kana[kanaCasuale()]}.png`; // Aggiunto () dopo kanaCasuale
-    console.log(risultato);
-    immagine.src = risultato;
+    var immagine = document.getElementById("HiraganaPicture"); //creo l'elemento immagine
+    var risultato = `../Images/Hiragana/${kana[kanaCasuale()]}.png`; //utilizzo il metodo kanaCasuale per avere un kana random
+    console.log(risultato); //debug
+    immagine.src = risultato; //applico il risultato ad immagine, cambiandola
 }
 
 function tagliaStringa(testo)
 {
-    var parti = testo.split('/');
-    var parteFinale = parti.pop(); // Prendo l'ultima parte dell'array (dopo l'ultima barra obliqua)
-    var kanaFinale = parteFinale.split('.')[0]; // Rimuovi l'estensione del file (ad esempio, ".png")
-    console.log(kanaFinale);
-    return kanaFinale;
+    var parti = testo.split('/'); //creo un array diviso ogni '/'
+    var parteFinale = parti.pop(); //prendo l'ultima parte dell'array (dopo l'ultima barra obliqua)
+    var kanaFinale = parteFinale.split('.')[0]; //rimuovo l'estensione del file (ad esempio, ".png")
+    console.log(kanaFinale); //debug
+    return kanaFinale; //invio kanaFinale come risultato dell'operazione
 }
 
-function controllaTesto() 
-{
-    var testoInserito = document.getElementById("TextBox").value;
 
-    var kanaIndirizzo = document.getElementById("HiraganaPicture").src;
+function controllaTesto() {
+    var testoInserito = document.getElementById("TextBox").value; //valore inserito nella textBox
+    var kanaIndirizzo = document.getElementById("HiraganaPicture").src; //ottengo l'indirizzo dell'immagine attualmente utilizzata
+    var kanaImmagine = tagliaStringa(kanaIndirizzo); //funzione tagliaStringa applicata a tutto l'indirizzo dell'immagine per ottenere la lettera attuale
+    var immagine = document.getElementById("HiraganaPicture"); //copio l'immagine per modificarla con canva
 
-    var kanaImmagine = tagliaStringa(kanaIndirizzo); 
+    var immagineNormale = new Image();
+    immagineNormale.src = `../Images/Hiragana/${kanaImmagine}.png`; //creo una copia della vecchia immagine per poterla riapplicare dopo
 
-    if (testoInserito.toLowerCase() === kanaImmagine.toLowerCase()) {
-        console.log("Il testo è corretto!");
-        primoKana();
-    } else {
-        console.log("Il testo non è corretto. Riprova.");
-        // Puoi aggiungere un avviso o un'altra azione qui
+    var canvas = document.createElement("canvas"); //creo l'elemento canvas
+    canvas.width = immagineNormale.width; //ottengo le dimensioni dell'immagine originale (altezza e larghezza)
+    canvas.height = immagineNormale.height;
+
+    var context = canvas.getContext("2d"); //ottengo un rendering 2D dell'immagine (?)
+
+    context.drawImage(immagineNormale, 0, 0); //disegno l'immagine sul canva
+
+    if (testoInserito.toLowerCase() === kanaImmagine.toLowerCase()) { //controllo che il testo iserito (dopo averlo trasformato in lowercase per comodita) sia uguale al kana rappresentato (sempre in lowercase per sicurezza)
+        console.log("Il testo è corretto!"); //debug
+
+        context.globalCompositeOperation = "source-in"; //le modifice al canva avverranno sui pixel "gia disegnati"
+        context.fillStyle = "#00d624"; //imposta il colore per le modifiche successive a verde 
+        context.fillRect(0, 0, canvas.width, canvas.height); //colora tutto il canva
+        context.globalCompositeOperation = "source-over"; //cambio le modifiche per applicarle sui pixel esterni
+        
+        immagine.src = canvas.toDataURL(); //carico il canva al posto dell'immagine
+
+        setTimeout(function () { //dopo 1 secondo, verra ripristinata l'immagine con quella normale e successivamente invocato il metodo 'primoKana'
+            immagine.src = immagineNormale.src; //ripristino l'immagine con l'originale 
+            primoKana(); //chiamo il metodo
+        }, 1000);
+
+        document.getElementById("TextBox").value = ""; //svuoto il contenuto della textBox
+    } 
+    else
+    {
+        console.log("Il testo non è corretto. Riprova."); //debug
+
+        context.globalCompositeOperation = "source-in"; //le modifice al canva avverranno sui pixel "gia disegnati"
+        context.fillStyle = "red"; //imposta il colore per le modifiche successive rosso 
+        context.fillRect(0, 0, canvas.width, canvas.height); //colora tutto il canva
+        context.globalCompositeOperation = "source-over"; //cambio le modifiche per applicarle sui pixel esterni
+        
+        immagine.src = canvas.toDataURL(); //carico il canva al posto dell'immagine
+
+        setTimeout(function () { //ripristino l'immagine a quella normale dopo 1 secondo
+            immagine.src = immagineNormale.src;
+        }, 1000);
+        document.getElementById("TextBox").value = ""; //svuoto il contenuto della textBox
     }
 }

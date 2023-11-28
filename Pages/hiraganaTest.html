@@ -36,6 +36,12 @@
 
     <script>
       document.getElementById("Controllo").addEventListener("click", controllaTesto);
+      document.getElementById("TextBox").addEventListener("keypress", function(event) {
+        // Verifica se il tasto premuto è il tasto "Invio" (codice 13)
+        if (event.keyCode === 13) {
+          controllaTesto();
+        }
+      });
     </script>
     
 </body>
