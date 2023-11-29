@@ -1,14 +1,23 @@
+@font-face {
+    font-family: 'Kyokasho';
+    src: url('/Fonts/Kyokasho.ttc') format('ttc');
+}
+
+
 body {
     background-color: #333;
     color: white;
     text-align: center;
+    font-family: 'Kyokasho', sans-serif;
 }
 
 
 nav {
+    margin-top: 25px;
     background-color: #808080;
     color: white;
     padding: 15px;
+    padding-top: 20px;
     
 }
 
@@ -32,4 +41,32 @@ a {
 
 div {
     padding: 15px;
+}
+
+input{
+    background-color: #333;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    border-radius: 20px;
+    border-width: 5px;
+    border-color: white;
+}
+
+button{
+    background-color: #333;
+    color: white;
+    font-size: larger;
+    text-align: center;
+    border-radius: 20px;
+    border-width: 3px;
+    padding: 10px;
+    border-color: white;
+}
+
+
+p{
+    font-size: x-large;
+    font-style: italic; 
+    text-decoration: underline;
 }

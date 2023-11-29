@@ -9,7 +9,7 @@
     <script src="hiraganaTest.js"></script>
 </head>
 <body>
-    <h1>Test your Hiragana reading skill</h1>
+    <h1>Test your "ひらがな" reading skill</h1>
 
     <nav>
       <ul>
@@ -32,9 +32,10 @@
     
     <div> 
       <input type="text" name="item" id="TextBox">
-      <button id="Controllo">Controlla</button>
     </div>
-
+    
+    <button id="Controllo">Check</button>
+    <audio id = "mediaPlayer" src="../Sounds/LevelUp.mp3"></audio>
     <script>
       document.getElementById("Controllo").addEventListener("click", controllaTesto);
       document.getElementById("TextBox").addEventListener("keypress", function(event) {
