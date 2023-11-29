@@ -1,6 +1,6 @@
-//var kana = ['a', 'i', 'u', 'e', 'o'];
+var kana = ['a', 'i', 'u', 'e', 'o'];
 
-var kana = ['a', 'i', 'u', 'e', 'o', 'ka', 'ki', 'ku', 'ke', 'ko', 'sa', 'shi', 'su', 'se', 'so', 'ta', 'chi', 'tsu', 'te', 'to', 'na', 'ni', 'nu', 'ne', 'no', 'ha', 'hi', 'fu', 'he', 'ho', 'ma', 'mi', 'mu', 'me', 'mo', 'ya', 'yu', 'yo', 'ra', 'ri', 'ru', 're', 'ro', 'wa', 'wo', 'ga', 'gi', 'gu', 'ge', 'go', 'za', 'ji', 'zu', 'ze', 'zo', 'da', 'de', 'do', 'ba', 'bi', 'bu', 'be', 'bo', 'pa', 'pi', 'pu', 'pe', 'po',];
+//var kana = ['a', 'i', 'u', 'e', 'o', 'ka', 'ki', 'ku', 'ke', 'ko', 'sa', 'shi', 'su', 'se', 'so', 'ta', 'chi', 'tsu', 'te', 'to', 'na', 'ni', 'nu', 'ne', 'no', 'ha', 'hi', 'fu', 'he', 'ho', 'ma', 'mi', 'mu', 'me', 'mo', 'ya', 'yu', 'yo', 'ra', 'ri', 'ru', 're', 'ro', 'wa', 'wo', 'ga', 'gi', 'gu', 'ge', 'go', 'za', 'ji', 'zu', 'ze', 'zo', 'da', 'de', 'do', 'ba', 'bi', 'bu', 'be', 'bo', 'pa', 'pi', 'pu', 'pe', 'po',];
 var kanaLetti = []; //kana che sono gia stati "utilizzati"
 var kanaCorretti = []; //array dei kana che erano corretti
 var kanaSbagliati = []; //array dei kana che sono stati sbagliati
@@ -31,7 +31,8 @@ function primoKana()
         }
         else //altrimenti
         {
-            immagine.src = '../Images/test2.png'; //imposta l'immagine a test2 (debug)
+            immagine.src = '../Images/Otsukarei.png'; //imposta l'immagine a test2 (debug)
+            fineTest(); //il test e completato
         }
     }
     
@@ -138,4 +139,20 @@ function controllaTesto() {
 
         
     }
+    
+}
+
+function fineTest()
+{
+    var textBox = document.getElementById("TextBox"); //variabile della textBox
+    var tastoControlla = document.getElementById("Controllo"); //variabile del tasto di controllo
+
+    textBox.remove(); //rimuovo la textBox
+    tastoControlla.remove(); //rimuovo il tasto
+
+    var testoElement = document.createTextNode(`Congrats!!! you made ${kanaSbagliati.length} and you made a score of ${(kanaCorretti.length / kana.length)*100}%`); //creo il testo
+    var paragrafoElement = document.createElement("p"); //creeo l'elemento paragrafo
+    paragrafoElement.appendChild(testoElement); //aggiungo il testo al paragrafo
+    document.body.appendChild(paragrafoElement); //aggiungo il paragrafo al HTML
+
 }
