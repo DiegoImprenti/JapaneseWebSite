@@ -10,6 +10,7 @@ body {
     text-align: center;
     font-family: 'Kyokasho', sans-serif;
     font-variant: small-caps;
+
 }
 
 #Title{
@@ -21,7 +22,7 @@ nav {
     background-color: #808080;
     color: white;
     padding: 15px;
-    padding-top: 20px;    
+    padding-top: 20px;
 }
 
 ul {
@@ -40,4 +41,36 @@ li {
 a {
     text-decoration: none;
     color: white;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 75%;
+    img{
+        width: 40%;
+    }
+  }
+  
+  td, th {
+    border: 3px solid white;
+    padding: 8px;
+    text-align: center;
+    font-size: x-large;
+    color: #fe7a8f;
+      
+  } 
+
+/* 
+  #SiLinea{
+    border: 3px solid white;
+  }
+
+  #NoLinea {
+    border: transparent;
+  } */
+
+p{
+    color: #fe7a8f;
+    font-size: x-large;
 }
