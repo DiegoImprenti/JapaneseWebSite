@@ -9,8 +9,12 @@ body {
     color: white;
     text-align: center;
     font-family: 'Kyokasho', sans-serif;
+    font-variant: small-caps;
 }
 
+#Title{
+    color: #fe7a8f;
+}
 
 nav {
     margin-top: 25px;

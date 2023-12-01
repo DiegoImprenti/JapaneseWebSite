@@ -3,12 +3,16 @@
     src: url('/Fonts/Kyokasho.ttc') format('ttc');
 }
 
+#Title{
+    color: #fe7a8f;
+}
 
 body {
     background-color: #333;
     color: white;
     text-align: center;
     font-family: 'Kyokasho', sans-serif;
+    font-variant: small-caps;
 }
 
 

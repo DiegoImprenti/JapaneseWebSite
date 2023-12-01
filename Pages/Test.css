@@ -3,12 +3,16 @@
     src: url('/Fonts/Kyokasho.ttc') format('ttc');
 }
 
+#Title{
+    color: #fe7a8f;
+}
 
 body {
     background-color: #333;
     color: white;
     text-align: center;
     font-family: 'Kyokasho', sans-serif;
+    font-variant: small-caps;
 }
 
 
@@ -45,23 +49,23 @@ div {
 
 input{
     background-color: #333;
-    color: white;
+    color: #fe7a8f;
     font-size: xx-large;
     text-align: center;
     border-radius: 20px;
     border-width: 5px;
-    border-color: white;
+    border-color: #fe7a8f;
 }
 
 button{
     background-color: #333;
-    color: white;
+    color: #fe7a8f;
     font-size: larger;
     text-align: center;
     border-radius: 20px;
     border-width: 3px;
     padding: 10px;
-    border-color: white;
+    border-color: #fe7a8f;
 }
 
 

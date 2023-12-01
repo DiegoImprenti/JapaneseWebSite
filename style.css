@@ -9,8 +9,13 @@ body {
     color: white;
     text-align: center;
     font-family: 'Kyokasho', sans-serif;
+    font-variant: small-caps;
+
 }
 
+#Title{
+    color: #fe7a8f;
+}
 
 nav {
     margin-top: 25px;
@@ -18,7 +23,7 @@ nav {
     color: white;
     padding: 15px;
     padding-top: 20px;
-    
+
 }
 
 ul {
@@ -31,10 +36,69 @@ ul {
 li {
     display: inline;
     margin-right: 35px;
-    
+
 }
 
 a {
-    text-decoration: none;
+    text-decoration: solid;
+    font-variant: small-caps;
     color: white;
 }
+
+#Logo{
+    width: 25%;
+    resize: none;
+    margin-bottom: -20px;
+
+}
+
+h2{
+    font-size: x-large;
+    color: #fe7a8f;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+div {
+    display: flex;
+    font-variant: small-caps;
+
+    h1{
+        font-size: 130px;
+        /* color: #ad03fc; */
+        color: #fe7a8f;
+        margin-top: -5px;
+        margin-bottom: -40px;
+    }
+    h2{
+        font-size: x-large;
+        color: #fe7a8f;
+        /* color: #ad03fc; */
+    }
+    p{
+        font-size: large;
+        text-align: left;
+    }
+    
+    }
+    #HiraganaP{
+        margin-top: 65px;
+        margin-left: -70px;
+    }
+    #KatakanaP{
+        margin-top: 65px;
+        margin-left: -0px;
+        margin-right: -75px;
+        text-align: right;
+    }
+    #KanjiP{
+        margin-top: 65px;
+        margin-left: -30px;
+    }
+    #KatakanaText{
+        text-align: right;
+    }
+
+
+
+
