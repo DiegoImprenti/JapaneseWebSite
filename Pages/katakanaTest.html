@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katakana Test</title>
+    <link rel="icon" href="../Images/FavIconKatakana48.png" type="image/png">
+    <link rel="stylesheet" href="Test.css">
+    <script src="katakanaTest.js"></script>
+</head>
+<body>
+    <h1>Test your "カタカナ" reading skill</h1>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="hiragana.html">Hiragana</a></li>
+        <li><a href="hiraganaTest.html">Hiragana Test</a></li>
+        <li><a href="katakana.html">Katakana</a></li>
+        <li><a href="katakanaTest.html">Katakana Test</a></li>
+        <li><a href="kanji.html">Kanji</a></li>
+        <li><a href="grammatica.html">Grammar</a></li>
+      </ul>
+     </nav>
+    
+    <div>
+      <img id="KatakanaPicture" class="KatakanaPicture" src = "" alt="Immagine test"> 
+    </div>
+    <script>
+      primoKana();
+    </script>
+    
+    <div> 
+      <input type="text" name="item" id="TextBox">
+    </div>
+    
+    <button id="Controllo">Check</button>
+    <audio id = "mediaPlayer" src="../Sounds/LevelUp.mp3"></audio>
+    <script>
+      document.getElementById("Controllo").addEventListener("click", controllaTesto);
+      document.getElementById("TextBox").addEventListener("keypress", function(event) {
+        if (event.keyCode === 13) { // Verifica se il tasto premuto è il tasto "Invio" (codice 13)
+
+          controllaTesto();
+        }
+      });
+    </script>
+    
+</body>
+</html>

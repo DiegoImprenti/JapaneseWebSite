@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Kyokasho';
+    src: url('/Fonts/Kyokasho.ttc') format('ttc');
+}
+
+
+body {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-family: 'Kyokasho', sans-serif;
+}
+
+
+nav {
+    margin-top: 25px;
+    background-color: #808080;
+    color: white;
+    padding: 15px;
+    padding-top: 20px;    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline;
+    margin-right: 35px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
