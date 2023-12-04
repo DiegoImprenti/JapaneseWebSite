@@ -59,8 +59,9 @@ h2{
 }
 
 #Paragraph{
-    font-size: large;
+    font-size: larger;
     color: white;
+    text-align: left;
 }
 
 table {
@@ -72,10 +73,16 @@ table {
 }
 
 td, th {
-    border: 3px solid white;
+    /* border: 3px solid white; */
     padding: 8px;
     text-align: center;
     font-size: x-large;
     color: #fe7a8f;
-    width: 50%; /* e il minimo che si puo fare */
+    /* e il minimo che si puo fare */
+    width: 525px;
 } 
+
+hr{
+    color: #fe7a8f; 
+    size: 5px;
+}
