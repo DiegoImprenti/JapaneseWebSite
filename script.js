@@ -17,3 +17,4 @@ document.addEventListener("DOMContentLoaded", function() {
     katakanaParagrafo.textContent = paragrafoKatakana;
     kanjiParagrafo.textContent = paragrafoKanji;
 });
+

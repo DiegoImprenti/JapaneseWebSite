@@ -50,6 +50,10 @@ kanji.forEach(element =>{ //per qualunque elemento nell'array 'kanji'
     SignificatoTabella.textContent = h2Element.textContent; //gli assegno il textContent di h2 (significato)
     SignificatoTabella.id = h2Element.id; //gli assegno l'ID di h2
 
+    linea.size = '5px'; //imposto lo spessore della linea
+    linea.color = '#fe7a8f'; //imposto il colore della linea
+    //perche sono tagliati???
+
     document.body.appendChild(table); //aggiungo la tabella al DOM
     document.body.appendChild(space); //aggiungo lo spazio vuoto al DOM
     document.body.appendChild(linea); //una bellissima linea UwU
