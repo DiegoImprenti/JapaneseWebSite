@@ -63,40 +63,44 @@ div {
     font-variant: small-caps;
     }
 
-    #HiraganaLetter, #Kanji, #KatakanaLetter{
-        font-size: 130px;
-        /* color: #ad03fc; */
-        color: #fe7a8f;
-        margin-top: -5px;
-        margin-bottom: -40px;
-    }
-    h2{
-        font-size: x-large;
-        color: #fe7a8f;
-        /* color: #ad03fc; */
-    }
-    p{
-        font-size: large;
-        text-align: left;
-    }
+#HiraganaLetter, #Kanji, #KatakanaLetter{
+    font-size: 130px;
+    color: #fe7a8f;
+    margin-top: -5px;
+    margin-bottom: -40px;
+}
 
-    #HiraganaP{
-        margin-top: 65px;
-        margin-left: -70px;
-    }
-    #KatakanaP{
-        margin-top: 65px;
-        margin-left: -0px;
-        margin-right: -75px;
-        text-align: right;
-    }
-    #KanjiP{
-        margin-top: 65px;
-        margin-left: -30px;
-    }
-    #KatakanaText{
-        text-align: right;
-    }
+h2{
+    font-size: x-large;
+    color: #fe7a8f;
+}
+
+#HiraganaP{
+    margin-top: 65px;
+    margin-left: -70px;
+    font-size: large;
+    text-align: left;
+}
+
+#KatakanaP{
+    margin-top: 65px;
+    margin-left: -0px;
+    margin-right: -75px;
+    text-align: right;
+    font-size: large;
+}
+
+
+#KanjiP{
+    margin-top: 65px;
+    margin-left: -30px;
+    font-size: large;
+    text-align: left;
+}
+
+#KatakanaText{
+    text-align: right;
+}
 
 
 

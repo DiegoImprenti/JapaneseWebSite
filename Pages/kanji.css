@@ -10,9 +10,9 @@
 body {
     background-color: #333;
     color: white;
-    text-align: center;
     font-family: 'Kyokasho', sans-serif;
     font-variant: small-caps;
+    text-align: center;
 }
 
 
@@ -42,3 +42,40 @@ a {
     color: white;
 }
 
+h2{
+    font-size: x-large;
+    color: #fe7a8f;
+}
+
+#Kanji{
+    font-size: 140px;
+    color: #fe7a8f;
+    padding: 0px;
+}
+
+#Text{
+    font-size: x-large;
+    color: #fe7a8f;
+}
+
+#Paragraph{
+    font-size: large;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    max-width: 75%;
+    text-align: center;
+
+}
+
+td, th {
+    border: 3px solid white;
+    padding: 8px;
+    text-align: center;
+    font-size: x-large;
+    color: #fe7a8f;
+    width: 50%; /* e il minimo che si puo fare */
+} 
