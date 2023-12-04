@@ -47,10 +47,12 @@ table {
     border-collapse: collapse;
     margin: auto;
     width: 75%;
-    img{
-        width: 40%;
-    }
+    
   }
+
+img{
+    width: 40%;
+}
   
   td, th {
     border: 3px solid white;
