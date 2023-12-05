@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var kanjiParagrafo = document.getElementById("KanjiText")
 
     // Aggiorna il testo nei paragrafi
+
     kanjiParagrafo.textContent = testoKanji;
 });
 
@@ -23,7 +24,7 @@ kanji.forEach(element =>{ //per qualunque elemento nell'array 'kanji'
     var divBella = document.createElement('div'); //creo una div per inserire i paragrafi
     var p1 = document.createElement('p'); //creo il primo paragrafo
     var p2 = document.createElement('p'); //creo il secondo paragrafo
-    var linea = document.createElement('hr'); //creo una linea :)
+    var linea = document.createElement('div'); //creo una linea :)
 
     var h1Element = document.createElement('h1'); //creo una variabile con l'elemento HTML <h1>
     h1Element.id = 'Kanji'; //l'ID dell'elemento e 'Kanji'
@@ -60,9 +61,12 @@ kanji.forEach(element =>{ //per qualunque elemento nell'array 'kanji'
     SignificatoTabella.textContent = h2Element.textContent; //gli assegno il textContent di h2 (significato)
     SignificatoTabella.id = h2Element.id; //gli assegno l'ID di h2
 
-    linea.size = '5px'; //imposto lo spessore della linea
-    linea.color = '#fe7a8f'; //imposto il colore della linea
-    //perche sono tagliati???
+
+    //<div class="line" style="background-color: #fe7a8f; height: 5px;"></div>
+
+    linea.class = 'line'; //imposto la classe della linea
+    linea.style = 'background-color: #fe7a8f; height: 5px;'; //imposto il colore della linea
+    linea.id = 'linea';
 
     document.body.appendChild(table); //aggiungo la tabella al DOM
     document.body.appendChild(space); //aggiungo lo spazio vuoto al DOM
