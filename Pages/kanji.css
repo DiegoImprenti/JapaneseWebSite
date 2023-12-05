@@ -86,3 +86,10 @@ td, th {
     color: #fe7a8f; 
     size: 5px;
 } */
+
+#KanjiText{
+    margin: 50px;
+    color: #fe7a8f;
+    margin-bottom: 3px;
+    margin-top: 3px;
+  }

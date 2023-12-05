@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Kyokasho';
+    src: url('/Fonts/Kyokasho.ttc') format('ttc');
+}
+
+
+body {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-family: 'Kyokasho', sans-serif;
+    font-variant: small-caps;
+
+}
+
+#Title{
+    margin-top: 10px;
+    color: #fe7a8f;
+}
+
+nav {
+    margin-top: 25px;
+    background-color: #808080;
+    color: white;
+    padding: 15px; 
+    padding-top: 20px;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline;
+    margin-right: 35px;
+
+}
+
+a {
+    text-decoration: solid;
+    font-variant: small-caps;
+    color: white;
+}
+
+#Logo{
+    width: 25%;
+    margin-bottom: -20px;
+
+}
+
+h2{
+    font-size: x-large;
+    color: #fe7a8f;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+div {
+    display: flex;
+    font-variant: small-caps;
+    }
+
+#HiraganaLetter, #Kanji, #KatakanaLetter{
+    font-size: 130px;
+    color: #fe7a8f;
+    margin-top: -5px;
+    margin-bottom: -40px;
+}
+
+h2{
+    font-size: x-large;
+    color: #fe7a8f;
+}
+
+#HiraganaP{
+    margin-top: 65px;
+    margin-left: -70px;
+    font-size: large;
+    text-align: left;
+}
+
+#KatakanaP{
+    margin-top: 65px;
+    margin-left: -0px;
+    margin-right: -75px;
+    text-align: right;
+    font-size: large;
+}
+
+
+#KanjiP{
+    margin-top: 65px;
+    margin-left: -30px;
+    font-size: large;
+    text-align: left;
+}
+
+#KatakanaText{
+    text-align: right;
+}
+
+
+
