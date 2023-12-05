@@ -126,6 +126,7 @@ function controllaTesto() {
 function fineTest()
 {
     var audio = document.getElementById("mediaPlayer"); //creo l'elemento 'mediaPlayer'
+    var testoFinale = document.getElementById('TestoVittoria'); //creo l'elemento testoVittoria
     audio.play(); //riproduco il suono della vittoria yay!!!
 
     var textBox = document.getElementById("TextBox"); //variabile della textBox
@@ -136,7 +137,7 @@ function fineTest()
 
     var testoElement = document.createTextNode(`Congrats!!! You made ${kanaSbagliati.length} mistake and you made a score of ${((kanaCorretti.length / kana.length)*100).toFixed(2)}%`); //creo il testo
     var paragrafoElement = document.createElement("p"); //creeo l'elemento paragrafo
-    paragrafoElement.appendChild(testoElement); //aggiungo il testo al paragrafo
-    document.body.appendChild(paragrafoElement); //aggiungo il paragrafo al HTML
-
+    // paragrafoElement.appendChild(testoElement); //aggiungo il testo al paragrafo
+    // document.body.appendChild(paragrafoElement); //aggiungo il paragrafo al HTML
+    testoFinale.textContent = testoElement.textContent;
 }
