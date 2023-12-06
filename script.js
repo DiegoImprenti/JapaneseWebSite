@@ -18,3 +18,23 @@ document.addEventListener("DOMContentLoaded", function() {
     kanjiParagrafo.textContent = paragrafoKanji;
 });
 
+var parole = ['こんにちは！', 'おはよう！', 'はじめまして！', 'げんきですか？', 'よう']; //saluti giapponesi
+var titoloElement = document.getElementById('Title'); //ottengo l'elemento h1
+
+function cambiaParolaCasuale() { 
+    var indiceCasuale = Math.floor(Math.random() * parole.length); //ottiengo un numero casuale tra 0 e la lunghezza dell'array delle parole
+    if(parole[indiceCasuale] !== titoloElement.textContent)
+    {    
+        titoloElement.textContent = parole[indiceCasuale]; //imposto il textContent con la parola casuale
+    }
+    else
+    {
+        cambiaParolaCasuale();
+    }
+}
+
+var intervallo = 4000; //intervallo in millisecondi 
+
+setInterval(cambiaParolaCasuale, intervallo); //richiama la funzione ogni secondi (dettati da intervallo)
+
+
