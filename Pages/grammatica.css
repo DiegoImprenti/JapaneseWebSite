@@ -43,3 +43,65 @@ a {
     text-decoration: none;
     color: white;
 }
+
+
+h1{
+    color: #fe7a8f;
+}
+
+h2{
+    font-size: x-large;
+    color: #fe7a8f;
+}
+
+#Particella{
+    font-size: 140px;
+    color: #fe7a8f;
+    padding: 0px;
+}
+
+#Title{
+    margin-top: 10px;
+    color: #fe7a8f;
+}
+
+#Paragraph{
+    font-size: larger;
+    color: white;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    max-width: 75%;
+    text-align: center;
+
+}
+
+td, th {
+    /* border: 3px solid white; */
+    padding: 8px;
+    text-align: center;
+    font-size: x-large;
+    color: #fe7a8f;
+    /* e il minimo che si puo fare */
+    width: 525px;
+} 
+
+/* hr{
+    color: #fe7a8f; 
+    size: 5px;
+} */
+
+#KanjiText{
+    margin: 50px;
+    color: #fe7a8f;
+    margin-bottom: 3px;
+    margin-top: 3px;
+  }
+
+  #linea{
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }

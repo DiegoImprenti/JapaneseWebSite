@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     kanjiParagrafo.textContent = paragrafoKanji;
 });
 
-var parole = ['こんにちは！', 'おはよう！', 'はじめまして！', 'げんきですか？', 'よう']; //saluti giapponesi
+var parole = ['こんにちは！', 'おはよう！', 'はじめまして！', 'げんきですか？', 'よう', 'ねぇ']; //saluti giapponesi
 var titoloElement = document.getElementById('Title'); //ottengo l'elemento h1
 
 function cambiaParolaCasuale() { 
