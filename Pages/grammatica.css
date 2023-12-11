@@ -105,3 +105,12 @@ td, th {
     margin-top: 10px;
     margin-bottom: -10px;
   }
+
+  #ParagrafoStruttura{
+    font-size: x-large;
+    margin-top: 20px;
+  }
+
+  #Esempio, #GrammaticaSpiegazione{
+    font-size: larger;
+  }

@@ -1,12 +1,105 @@
+//
+//Struttura grammaticale
+//
+
+var testoStruttura = "The grammatical structure of sentences in Japanese is different from that in English:";
+var esempioStruttura = ["Subject + Particles + Name/Adjective/Place + Verb (Affermative)", "Subject + Particles + Name/Adjective/Place + Verb (Negative)", "Subject + Particles + Name/Adjective/Place + Verb (か form)"];
+var provaStruttura = ["私はエマです", "私はマリオじゃありません", "これは何ですか"];
+var provaStrutturaInglese = ["I'm Emma", "I'm not Mario", "What is this?"];
+var testoSpiegazione = ["This is the usual construction of an affermative japanese sentence", "This is the usual construction of a negative japanese sentence", "This is the usual construction of a question in japanese"];
+var k = 0;
+
+var particelleParagrafo = document.createElement('h1'); //creo un nuovo elemento h1
+particelleParagrafo.textContent = 'Grammatical Structure'; //imposto il testo del paragrafo
+particelleParagrafo.id = 'TitoloParagrafoStruttura'; //imposto l'id
+
+var paragrafoStruttura = document.createElement('p');
+paragrafoStruttura.textContent = testoStruttura;
+paragrafoStruttura.id = 'ParagrafoStruttura'
+
+var linea = document.createElement('div'); //creo una linea :)
+linea.class = 'line'; //imposto la classe della linea
+linea.style = 'background-color: #fe7a8f; height: 3px;'; //imposto il colore della linea
+linea.id = 'linea'; //imposto l'id sulla linea
+
+var space = document.createElement('br'); //creo una variabile con l'elemento HTML <br>
+
+var linea2 = document.createElement('div'); //creo una linea :)
+linea2.class = 'line'; //imposto la classe della linea
+linea2.style = 'background-color: white; height: 3px;'; //imposto il colore della linea
+linea2.id = 'linea2'; //imposto l'id sulla linea
+
+document.body.appendChild(particelleParagrafo); //aggiungo il paragrafo al documento
+document.body.appendChild(space); //aggiungo lo spazio vuoto al DOM sotto la linea
+document.body.appendChild(linea); //linea UwU
+document.body.appendChild(space); //aggiungo lo spazio vuoto al DOM sotto la linea
+
+document.body.appendChild(paragrafoStruttura);
+document.body.appendChild(space);
+document.body.appendChild(linea);
+document.body.appendChild(space);
+
+esempioStruttura.forEach(element => {
+
+    var grammaticaSpiegazione = document.createElement('p');
+    grammaticaSpiegazione.textContent = esempioStruttura[k];
+    grammaticaSpiegazione.id = 'GrammaticaSpiegazione';
+
+    var fraseEsempio = document.createElement('p');
+    fraseEsempio.textContent = provaStruttura[k];
+    fraseEsempio.id = "Esempio";
+
+    var fraseEsempioTradotta = document.createElement('p');
+    fraseEsempioTradotta.textContent = provaStrutturaInglese[k];
+    fraseEsempioTradotta.id = 'Esempio';
+
+    var grammaticaSpiegazioneTesto = document.createElement('p');
+    grammaticaSpiegazioneTesto.textContent = testoSpiegazione[k];
+    grammaticaSpiegazioneTesto.id = 'GrammaticaSpiegazione';
+
+    var linea2 = document.createElement('div'); //creo una linea :)
+    linea2.class = 'line'; //imposto la classe della linea
+    linea2.style = 'background-color: white; height: 3px;'; //imposto il colore della linea
+    linea2.id = 'linea2'; //imposto l'id sulla linea
+
+    var space = document.createElement('br'); //creo una variabile con l'elemento HTML <br>
+
+
+    document.body.appendChild(grammaticaSpiegazione);
+    document.body.appendChild(space);
+    document.body.appendChild(fraseEsempio);
+    document.body.appendChild(space);
+    document.body.appendChild(fraseEsempioTradotta);
+    document.body.appendChild(space);
+    document.body.appendChild(grammaticaSpiegazioneTesto);
+    document.body.appendChild(space);
+    document.body.appendChild(linea2)
+    document.body.appendChild(space);
+
+    k++;
+});
+
+
+
+
+
+//-------------
+//Particelle
+//-------------
+
+
 var particelle = ['は', 'が', 'か', 'へ', 'に', 'と', 'を', 'で', 'の', 'も', 'よ', 'ね']; //Particelle Fondamentali
 var pronuncia = ['wa', 'ga', 'ka', 'e', 'ni', 'to', 'o', 'de', 'no', 'mo', 'yo', 'ne']; //Pronuncia delle particelle in ローマ字
-var significato = ['Topic marker, it introduces the topic of the sentence, often coincide with the subject', 'Subject marker, it declares the subject of a sentence', 'Question marker, goes at the end of a sentence and is used to ask a question', 'Destination marker, it introduces the destination the subject is heading to', 'Place marker, it introduce the place where the subject is', 'Companion marker / "and", it can both mark a companion or the "and" conjunction', 'Direct object, indicate something or someone who is the recipient of the action','Tool marker, it explains how the action is carried out', 'Information marker / Possessive marker, it either add more information or introduce the possession of the subject', 'Also, can be just used with the subject', 'Emphasis on the sentence, placed at the end it gives a confident vibe to the sentence', 'Support Request, placed at the end is used to search for the support of other people in what was just said']; //significato delle particelle
+var significato = ['Topic marker, it introduces the topic of the sentence, often coincide with the subject', 'Subject marker, it declares the subject of a sentence', 'Question marker, goes at the end of a sentence and is used to ask a question', 'Destination marker, it introduces the destination the subject is heading to', 'Place marker, it introduce the place where the subject is', 'Companion marker / "and", it can both mark a companion or the "and" conjunction', 'Direct object, indicate something or someone who is the recipient of the action', 'Tool marker, it explains how the action is carried out', 'Information marker / Possessive marker, it either add more information or introduce the possession of the subject', 'Also, can be just used with the subject', 'Emphasis on the sentence, placed at the end it gives a confident vibe to the sentence', 'Support Request, placed at the end is used to search for the support of other people in what was just said']; //significato delle particelle
 var esempi = ['私はエマです', 'あの猫がかわいい', 'どうぶつの森は楽しいですか', 'スーパーへ行きます', '私は地下鉄のえきにあります', '私とカミラすし食べる', '私は日本語をべんきょうします', '手で食べる', 'これはカミラのけいたい', '私も', 'すごいですよ', 'むずかしいですね']; //esempi in giapponese 
 var significatiEsempi = ["I'm Emma", "That cat is cute", "Is 'Animal Crossing' fun?", 'I go to the supermarket', 'I am at the subway station', 'Me and Camilla eat sushi', "I'm learning japanese", 'Eating with the hands', "That's Camilla's phone", 'Me too', "It's amazing!!", "It's difficult, isn't it?"]; //traduzione degli esempi
 var i = 0; //indice dell'array 
 
+document.body.appendChild(space);
+document.body.appendChild(linea);
+document.body.appendChild(space);
 
-var particelleParagrafo = document.createElement('h1'); //creo un nuovo elemento h2
+var particelleParagrafo = document.createElement('h1'); //creo un nuovo elemento h1
 particelleParagrafo.textContent = 'Particles'; //imposto il testo del paragrafo
 particelleParagrafo.id = 'TitoloParagrafoParticelle'; //imposto l'id
 
@@ -83,7 +176,15 @@ particelle.forEach(element => { //per qualunque elemento nell'array 'particelle'
 });
 
 
-var particelleParagrafo = document.createElement('h1'); //creo un nuovo elemento h2
+
+
+
+//--------
+//Verbi
+//--------
+
+
+var particelleParagrafo = document.createElement('h1'); //creo un nuovo elemento h1
 particelleParagrafo.textContent = 'Verbs'; //imposto il testo del paragrafo
 particelleParagrafo.id = 'TitoloParagrafoVerbi'; //imposto l'id
 
