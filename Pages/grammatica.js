@@ -2,6 +2,7 @@
 //Struttura grammaticale
 //
 
+
 var testoStruttura = "The grammatical structure of sentences in Japanese is different from that in English:";
 var esempioStruttura = ["Subject + Particles + Name/Adjective/Place + Verb (Affermative)", "Subject + Particles + Name/Adjective/Place + Verb (Negative)", "Subject + Particles + Name/Adjective/Place + Verb (か form)"];
 var provaStruttura = ["私はエマです", "私はマリオじゃありません", "これは何ですか"];
@@ -194,6 +195,240 @@ document.body.appendChild(particelleParagrafo); //aggiungo il paragrafo al docum
 document.body.appendChild(space); //aggiungo lo spazio vuoto al DOM sotto la linea
 document.body.appendChild(linea) //linea UwU
 document.body.appendChild(space); //aggiungo lo spazio vuoto al DOM sotto la linea
+
+var testoVerbi1 = "In japanese, verbs are divided in 3 different categories: 一段 (いちだん), 五段 (ごだん), 不規則動詞 (ふきそくどうし)";
+var testoVerbiH2 = document.createElement('h2');
+testoVerbiH2.textContent = testoVerbi1;
+testoVerbiH2.id = 'testoVerbiH2';
+
+document.body.appendChild(testoVerbiH2);
+
+var titoloIchidan = "一段";
+var testoIchidan = "verbs which ends in -える / -いる. The last kana can be anyone but it must include the -え / -い sound (け, し, て, に...)";
+var cogniugazioniIchidan = "一段 verbs can use the following forms: う, え, お, without る, た, て"
+var ichidanVebro = '着る';
+var traduzioneIchidan = "To wear";
+var ichidanU = "着る, Dictionary form / う form";
+var ichidanE = "きれ(ば), え form | possibility or condition";
+var ichidanO = "きろ, お form | obbligation";
+var ichidanSenzaRu = 'き, without る form | used for conjugate';
+
+var titoloIchidanH3 = document.createElement('h2');
+titoloIchidanH3.textContent = titoloIchidan;
+
+var testoIchidanP = document.createElement('p');
+testoIchidanP.textContent = testoIchidan;
+testoIchidanP.id = 'ichidan';
+
+var cogniugazioniIchidanP = document.createElement('p');
+cogniugazioniIchidanP.textContent = cogniugazioniIchidan;
+
+var ichidanVebroH3 = document.createElement('h2');
+ichidanVebroH3.textContent = ichidanVebro;
+
+var traduzioneIchidanP = document.createElement('p');
+traduzioneIchidanP.textContent = traduzioneIchidan;
+
+var ichidanUP = document.createElement('p');
+ichidanUP.textContent = ichidanU;
+
+var ichidanEP = document.createElement('p');
+ichidanEP.textContent = ichidanE;
+
+var ichidanOP = document.createElement('p');
+ichidanOP.textContent = ichidanO;
+
+var ichidanSenzaRuP = document.createElement('p');
+ichidanSenzaRuP.textContent = ichidanSenzaRu;
+
+
+document.body.appendChild(titoloIchidanH3);
+document.body.appendChild(space)
+document.body.appendChild(testoIchidanP);
+document.body.appendChild(space);
+document.body.appendChild(cogniugazioniIchidanP);
+document.body.appendChild(ichidanVebroH3);
+document.body.appendChild(traduzioneIchidanP);
+document.body.appendChild(ichidanUP);
+document.body.appendChild(ichidanEP);
+document.body.appendChild(ichidanOP);
+document.body.appendChild(ichidanSenzaRuP);
+document.body.appendChild(space);
+
+var titoloGodan = "五段";
+var testoGodan = "All the other verbs who don't end with -える / -いる and are not irregular";
+var cogniugazioniGodan = "五段 verbs can use the following forms: あ, い, う, え, お, た, て"
+var godanVebro = '買う';
+var traduzioneGodan = "To buy";
+var godanA = "かわ(ない), あ form | simple negation / intention to not do something"
+var godanI = "買い, い form | used for conjugate"
+var godanU = "かう, Dictionary form / う form";
+var godanE = "かえ(ば), え form | possibility or condition";
+var godanO = "かお, お form | obbligation";
+
+
+var titoloGodanH3 = document.createElement('h2');
+titoloGodanH3.textContent = titoloGodan;
+
+var testoGodanP = document.createElement('p');
+testoGodanP.textContent = testoGodan;
+testoGodanP.id = 'Godan';
+
+var cogniugazioniGodanP = document.createElement('p');
+cogniugazioniGodanP.textContent = cogniugazioniGodan;
+
+var GodanVebroH3 = document.createElement('h2');
+GodanVebroH3.textContent = godanVebro;
+
+var traduzioneGodanP = document.createElement('p');
+traduzioneGodanP.textContent = traduzioneGodan;
+
+var GodanAP = document.createElement('p');
+GodanAP.textContent = godanA;
+
+var GodanIP = document.createElement('p');
+GodanIP.textContent = godanI;
+
+var GodanUP = document.createElement('p');
+GodanUP.textContent = godanU;
+
+var GodanEP = document.createElement('p');
+GodanEP.textContent = godanE;
+
+var GodanOP = document.createElement('p');
+GodanOP.textContent = godanO;
+
+
+document.body.appendChild(titoloGodanH3);
+document.body.appendChild(space)
+document.body.appendChild(testoGodanP);
+document.body.appendChild(space);
+document.body.appendChild(cogniugazioniGodanP);
+document.body.appendChild(GodanVebroH3);
+document.body.appendChild(traduzioneGodanP);
+document.body.appendChild(GodanAP);
+document.body.appendChild(GodanIP);
+document.body.appendChild(GodanUP);
+document.body.appendChild(GodanEP);
+document.body.appendChild(GodanOP);
+
+
+var verbalTense = "Those are the verbal tense that you're going to use in japanese";
+var verbalTensePresente = 'Present Positive: -ます, Present Negative: -ません';
+var verbalTensePassato = 'Past Positive: -ました, Past Negative: -ませんでした';
+var verbalTenseSpiegazione = "一段 and 五段 verbs conjugate differently, here how it's done";
+
+var verbalTenseP = document.createElement('h2');
+verbalTenseP.textContent = verbalTense;
+verbalTenseP.id = 'testoVerbiH2';
+
+var verbalTensePresenteP = document.createElement('p');
+verbalTensePresenteP.textContent = verbalTensePresente;
+
+var verbalTensePassatoP = document.createElement('p');
+verbalTensePassatoP.textContent = verbalTensePassato;
+
+var verbalTenseSpiegazioneP = document.createElement('p');
+verbalTenseSpiegazioneP.textContent = verbalTenseSpiegazione;
+
+document.body.appendChild(verbalTenseP);
+document.body.appendChild(verbalTensePresenteP);
+document.body.appendChild(verbalTensePassatoP);
+document.body.appendChild(verbalTenseSpiegazioneP);
+
+
+var howToConjugateIchidan = "To conjugate 一段 verbs, use the 'without る form' and then add the verbal tense you need";
+var ichidanVebroConiugare = "寝る";
+var ichidanVebroConiugareTradotto = "To sleep";
+var ichidanPresente = "ねます, ねません";
+var ichidanPresenteTradotto = "Sleep, Not sleep";
+var ichidanPassato = "ねました, ねませんでした";
+var ichidanPassatoTradotto = "Slept, Not slept";
+
+var howToConjugateIchidanP = document.createElement('h2');
+howToConjugateIchidanP.textContent = howToConjugateIchidan;
+howToConjugateIchidanP.id = 'testoVerbiH2';
+
+var ichidanVerboConiugareP = document.createElement('h3');
+ichidanVerboConiugareP.textContent = `Ichidan verb: ${ichidanVebroConiugare} (${ichidanVebroConiugareTradotto})`;
+
+var ichidanPresenteP = document.createElement('p');
+ichidanPresenteP.textContent = `Present: ${ichidanPresente} (${ichidanPresenteTradotto})`;
+
+var ichidanPassatoP = document.createElement('p');
+ichidanPassatoP.textContent = `Past: ${ichidanPassato} (${ichidanPassatoTradotto})`;
+
+document.body.appendChild(howToConjugateIchidanP);
+document.body.appendChild(ichidanVerboConiugareP);
+document.body.appendChild(ichidanPresenteP);
+document.body.appendChild(ichidanPassatoP);
+
+var howToConjugateGodan = "To conjugate 一段 verbs you have to use with 'い form' and then add the verbal tense you need";
+var godanVerboConiugare = "行く";
+var godanVerboConiugareTradotto = "To go";
+var godanPresente = "いきます, いきません";
+var godanPresenteTradotto = 'Go, Not go';
+var godanPassato = 'いきました, いきませんでした';
+var godanPassatoTradotto = "Went, Not went";
+
+var howToConjugateGodanP = document.createElement('h2');
+howToConjugateGodanP.textContent = howToConjugateGodan;
+howToConjugateGodanP.id = 'testoVerbiH2';
+
+var godanVerboConiugareP = document.createElement('h3');
+godanVerboConiugareP.textContent = `Godan verb: ${godanVerboConiugare} (${godanVerboConiugareTradotto})`;
+
+var godanPresenteP = document.createElement('p');
+godanPresenteP.textContent = `Present: ${godanPresente} (${godanPresenteTradotto})`;
+
+var godanPassatoP = document.createElement('p');
+godanPassatoP.textContent = `Past: ${godanPassato} (${godanPassatoTradotto})`;
+
+document.body.appendChild(howToConjugateGodanP);
+document.body.appendChild(godanVerboConiugareP);
+document.body.appendChild(godanPresenteP);
+document.body.appendChild(godanPassatoP);
+
+
+var titoloIrregolari = "為る (する) & 来る (くる)";
+var testoIrregolai = "Those verbs are the only 2 irregular verbs in japanese, they conjugate differently than other verbs. 為る means 'to do' and 来る means 'to come'";
+var suruPresente = "します, しません";
+var suruPresenteTradotto = "Do, Do not";
+var suruPassato = "しました, しませんでした";
+var suruPassatoTradotto = "Did, Did not"
+var kuruPresente = "きます, きません";
+var kuruPresenteTradotto = "Come, Come not";
+var kuruPassato = 'きました, きませんでした';
+var kuruPassatoTradotto = "Came, Came not"
+
+var titoloIrregolariH3 = document.createElement('h2');
+titoloIrregolariH3.textContent = titoloIrregolari;
+
+var testoIrregolariP = document.createElement('p');
+testoIrregolariP.textContent = testoIrregolai;
+
+var suruPresenteP = document.createElement('p');
+suruPresenteP.textContent = `Present for 為る (する): ${suruPresente} (${suruPresenteTradotto})`;
+
+var suruPassatoP = document.createElement('p');
+suruPassatoP.textContent = `Past for 為る (する): ${suruPassato} (${suruPassatoTradotto})`;
+
+var kuruPresenteP = document.createElement('p');
+kuruPresenteP.textContent = `Present for 来る (くる): ${kuruPresente} (${kuruPresenteTradotto})`;
+
+var kuruPassatoP = document.createElement('p');
+kuruPassatoP.textContent = `Past for 来る (くる): ${kuruPassato} (${kuruPassatoTradotto})`;
+
+document.body.appendChild(titoloIrregolariH3);
+document.body.appendChild(testoIrregolariP);
+document.body.appendChild(suruPresenteP);
+document.body.appendChild(suruPassatoP);
+document.body.appendChild(kuruPresenteP);
+document.body.appendChild(kuruPassatoP);
+
+document.body.appendChild(linea2);
+
+document.body.appendChild(space);
 
 
 
