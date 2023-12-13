@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Kyokasho';
+    src: url('/Fonts/Kyokasho.ttc') format('ttc');
+}
+
+
+body {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-family: 'Kyokasho', sans-serif;
+    font-variant: small-caps;
+    padding: 10px;
+}
+
+#Title{
+    margin-top: 10px;
+    color: #fe7a8f;
+}
+
+nav {
+    margin-top: 25px;
+    background-color: #808080;
+    color: white;
+    padding: 15px; 
+    padding-top: 20px;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline;
+    margin-right: 35px;
+
+}
+
+a {
+    text-decoration: solid;
+    font-variant: small-caps;
+    color: white;
+}
+
+#Logo{
+    width: 25%;
+    margin-bottom: -20px;
+
+}
+
+h2{
+    color: #fe7a8f;
+}
+
+div {
+    display: flex;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+#HiraganaLetter, #Kanji, #KatakanaLetter{
+    font-size: 130px;
+    color: #fe7a8f;
+    margin-top: -5px;
+    margin-bottom: -40px;
+}
+
+h3{
+    text-align: center;
+    color: #fe7a8f;
+}
+
+
+hr{
+    color: #fe7a8f;
+    size: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 75%;
+  }
+
+img{
+    max-width: 200px;
+    max-height: 200px;    
+}
+  
+td, th {
+    /* border: 3px solid white; */
+    /* padding: 8px; */
+    text-align: center;
+    font-size: x-large;
+    color: #fe7a8f;
+      
+} 
