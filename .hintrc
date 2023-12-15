@@ -30,6 +30,8 @@
         "ignore": [
           "iframe[allow]",
           "iframe[allow]",
+          "iframe[loading]",
+          "iframe[loading]",
           "iframe[loading]"
         ]
       }

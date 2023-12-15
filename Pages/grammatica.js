@@ -464,7 +464,7 @@ var reInglese = ['This is my book', 'That costs 500 yen', 'Is that car over ther
 
 var no = ['この', 'その', 'あの', 'どの'];
 var noSpiegazioni = ['This (Specific, requires a subject)', 'That (Near the person who we are talkin to, requires a subject)', 'That over there (Far away from everyone in the conversation, requires a subject)', 'Which (Requires a subject)'];
-var noEsempi = ['この家は小','その本は楽しいですね', 'あの人はナヒダの母', 'どの本が好きですか'];
+var noEsempi = ['この家は小', 'その本は楽しいですね', 'あの人はナヒダの母', 'どの本が好きですか'];
 var noInglese = ['This house is small', 'That book is funny', "That person over there is Nahida's father", 'Which book do you like the most?'];
 
 var ko = ['ここ', 'そこ', 'あそこ', 'どこ'];
@@ -637,3 +637,57 @@ ko.forEach(element => {
 
     i++; //incremento il puntatore di 1
 });
+
+i = 0;
+
+var table = document.createElement('table'); //creo una variabile con l'elemento HTML <table>
+var space = document.createElement('br'); //creo una variabile con l'elemento HTML <br>
+var divBella = document.createElement('div'); //creo una div per inserire i paragrafi
+var p1 = document.createElement('p'); //creo il primo paragrafo
+var p2 = document.createElement('p'); //creo il secondo paragrafo
+var p3 = document.createElement('p');
+var linea = document.createElement('div'); //creo una linea :)
+
+var h1Element = document.createElement('h1'); //creo una variabile con l'elemento HTML <h1>
+h1Element.id = 'Pointers'; //l'ID dell'elemento e 'Pointers'
+h1Element.textContent = 'だれ'; //il text content e il particelle puntato dall'indirizzo i
+
+var textNode1 = document.createTextNode(`Who`); //creo il textNode1 che contiene la pronuncia pronuncia indicata dall'indice i
+var textNode2 = document.createTextNode(`Example: "これはだれのかばんですか"`); //creo il textNode2 che contiene la pronuncia significato indicata dall'indice i
+var textNode3 = document.createTextNode(`Translation: "Whose bag is this?"`);
+
+p1.appendChild(textNode1); //aggiungo a p1 il textNode1
+p2.appendChild(textNode2); //aggiungo a p2 il textNode2
+p3.appendChild(textNode3); //aggiungo a p3 il textNode3
+
+divBella.appendChild(p1); //aggiungo p1 alla div
+divBella.appendChild(space); //aggiungo uno spazio alla div
+divBella.appendChild(p2); //aggiungo p2 alla div
+divBella.appendChild(space); //aggiungo uno spazio alla div
+divBella.appendChild(p3); //aggiungo p3 alla div
+divBella.appendChild(space); //aggiungo uno spazio alla div
+
+
+var row1 = table.insertRow(); //creo la prima riga della tabella
+
+var particelleTabella = row1.insertCell(); //creo il particelle
+particelleTabella.id = h1Element.id; //gli assegno l'ID di h1 (h1 = particelle)
+particelleTabella.textContent = h1Element.textContent; //gi assegno il textContent di h1 
+
+var ParagrafoTabella = row1.insertCell(); //creo il paragrafo
+ParagrafoTabella.id = 'Paragraph'; //gli assegno l'ID di p (descrizione)
+ParagrafoTabella.appendChild(divBella) //aggiungo la div alla tabella
+
+var row2 = table.insertRow(); //creo la seconda riga della tabella
+
+
+linea.class = 'line'; //imposto la classe della linea
+linea.style = 'background-color: #ffffff; height: 3px;'; //imposto il colore della linea
+linea.id = 'linea';
+
+document.body.appendChild(table); //aggiungo la tabella al DOM
+document.body.appendChild(space); //aggiungo lo spazio vuoto al DOM
+document.body.appendChild(linea); //una bellissima linea    UwU
+document.body.appendChild(space); //aggiungo lo spazio vuoto al DOM sotto la linea
+
+i++; //incremento il puntatore di 1
